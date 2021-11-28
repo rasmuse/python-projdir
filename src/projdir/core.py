@@ -1,8 +1,6 @@
 from pathlib import Path
 from typing import Union
 
-from _pytest import mark
-
 StrOrPath = Union[str, Path]
 
 
@@ -12,6 +10,7 @@ class MarkerNotFound(FileNotFoundError):
 
 def _find_recursive(start_dir: Path, marker_relpath: Path, dir_ok: bool, file_ok: bool):
     current_dir = start_dir
+
     def is_match(path: Path):
         return (path.is_file() and file_ok) or (path.is_dir() and dir_ok)
 
