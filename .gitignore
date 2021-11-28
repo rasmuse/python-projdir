@@ -1,0 +1,9 @@
+# Python dev
+.venv
+__pycache__
+*.egg-info
+.tox
+dist
+
+# vs code
+*.code-workspace
